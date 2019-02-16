@@ -17,18 +17,18 @@ class Grade2ViewController: UIViewController {
     }
     
     @IBAction func OuyousuugakuButtonAction(_ sender: Any) {
-         performSegue(withIdentifier: "goSophopmoreBooks", sender: nil)
+         performSegue(withIdentifier: "goBooks2View", sender: nil)
     }
     
     @IBAction func DennshikougakuButtonAction(_ sender: Any) {
-         performSegue(withIdentifier: "goSophopmoreBooks", sender: nil)
+         performSegue(withIdentifier: "goBooks2View", sender: nil)
     }
     
     @IBAction func JinnkouchinoukisoButtonAction(_ sender: Any) {
-         performSegue(withIdentifier: "goSophopmoreBooks", sender: nil)
+         performSegue(withIdentifier: "goBooks2View", sender: nil)
     }
     
     @IBAction func NinnchisinnrigakuButtonAction(_ sender: Any) {
-         performSegue(withIdentifier: "goSophopmoreBooks", sender: nil)
+         performSegue(withIdentifier: "goBooks2View", sender: nil)
     }
 }

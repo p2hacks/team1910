@@ -18,7 +18,7 @@ class Grade3ViewController: UIViewController {
     
 
     @IBAction func ComingSoonButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "goJuniorBooks", sender: nil)
+        performSegue(withIdentifier: "goBooks3View", sender: nil)
         
     }
     
