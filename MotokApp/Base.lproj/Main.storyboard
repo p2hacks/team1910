@@ -137,7 +137,6 @@
         <!--Search Books View Controller-->
         <scene sceneID="LTV-Fe-RrR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LCW-w1-myP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5Eg-GK-li1" customClass="SearchBooksViewController" customModule="MotokApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YKQ-g3-a4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -339,6 +338,7 @@
                         <segue destination="MkD-YM-QpM" kind="show" identifier="goRegistViewController" id="ADK-R9-Mfc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCW-w1-myP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882" y="1240"/>
         </scene>
