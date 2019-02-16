@@ -94,6 +94,12 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
     //完了ボタン
     @IBAction func doneButton(_ sender: Any) {
         performSegue(withIdentifier: "checkScreenViewController", sender: nil)
+        
+        let myAp = UIApplication.shared.delegate as! AppDelegate
+        
+        myAp.addstuNumber = ["学籍番号": inputStudentNum.text!]
+        myAp.addpublishday = ["出版日": inputBookName.text!]
+        myAp.addcomment = ["コメント": inputComment.text!]
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

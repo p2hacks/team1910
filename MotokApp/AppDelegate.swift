@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var addimageURL = ["":""]//["":""]
+    var addstuNumber = ["":""]
+    var addpublishday = ["":""]
+    var addcomment = ["":""]
+    var adddeleteID = ["":""]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

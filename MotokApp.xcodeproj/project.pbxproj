@@ -19,7 +19,6 @@
 		D700928222145DF8009DA511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D700928122145DF8009DA511 /* GoogleService-Info.plist */; };
 		D700928322145DF8009DA511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D700928122145DF8009DA511 /* GoogleService-Info.plist */; };
 		D76136472215300F00634455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136462215300F00634455 /* RegistrationViewController.swift */; };
-		D76136482215300F00634455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136462215300F00634455 /* RegistrationViewController.swift */; };
 		D761364A22157C3700634455 /* Grade1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364922157C3700634455 /* Grade1ViewController.swift */; };
 		D761364B22157C3700634455 /* Grade1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364922157C3700634455 /* Grade1ViewController.swift */; };
 		D761364D22157C4B00634455 /* Grade2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364C22157C4B00634455 /* Grade2ViewController.swift */; };
@@ -27,9 +26,7 @@
 		D761365022157C5B00634455 /* Grade3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364F22157C5B00634455 /* Grade3ViewController.swift */; };
 		D761365122157C5B00634455 /* Grade3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364F22157C5B00634455 /* Grade3ViewController.swift */; };
 		D761365322157C6C00634455 /* Grade4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761365222157C6C00634455 /* Grade4ViewController.swift */; };
-		D761365422157C6C00634455 /* Grade4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761365222157C6C00634455 /* Grade4ViewController.swift */; };
 		D76136562215C3F600634455 /* RegistCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136552215C3F600634455 /* RegistCheckViewController.swift */; };
-		D76136572215C3F600634455 /* RegistCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136552215C3F600634455 /* RegistCheckViewController.swift */; };
 		D78923D62216E90E0066C87A /* SophomoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D52216E90E0066C87A /* SophomoreViewController.swift */; };
 		D78923D82216EA360066C87A /* JuniorBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D72216EA360066C87A /* JuniorBooksViewController.swift */; };
 		D78923DA2216EA760066C87A /* SeniorBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D92216EA760066C87A /* SeniorBooksViewController.swift */; };
@@ -325,14 +322,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MotokApp/Pods-MotokApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,15 +397,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D761364E22157C4B00634455 /* Grade2ViewController.swift in Sources */,
-				D76136572215C3F600634455 /* RegistCheckViewController.swift in Sources */,
 				D761364B22157C3700634455 /* Grade1ViewController.swift in Sources */,
 				D761365122157C5B00634455 /* Grade3ViewController.swift in Sources */,
-				D76136482215300F00634455 /* RegistrationViewController.swift in Sources */,
 				D7A397112214A5F600BD2130 /* ACategoryViewController.swift in Sources */,
 				D7A3970E2214A21400BD2130 /* MCategoryViewController.swift in Sources */,
 				D700927722145D76009DA511 /* MotokAppUITests.swift in Sources */,
 				D7A397142214B5D800BD2130 /* GradeChoiceViewController.swift in Sources */,
-				D761365422157C6C00634455 /* Grade4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
