@@ -1750,7 +1750,6 @@
         <image name="あげる人もらう人" width="450" height="357"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mFu-Pa-pNX"/>
         <segue reference="18d-kZ-9Ju"/>
         <segue reference="gsQ-0X-MZb"/>
         <segue reference="Ikk-eK-kwJ"/>
