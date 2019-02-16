@@ -40,17 +40,21 @@ class FreshmanBooksViewController: UIViewController {
     var labelArray: Array<UILabel> = []
     
     @IBAction func picture1ChoiceButton(_ sender: Any) {
+        myAp.i = 0
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
     }
     @IBAction func picture2ChoiceButton(_ sender: Any) {
+        myAp.i = 1
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
     }
     
     @IBAction func picture3ChoiceButton(_ sender: Any) {
+        myAp.i = 2
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
     }
     
     @IBAction func picture4ChoiceButton(_ sender: Any) {
+        myAp.i = 3
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
     }
     
@@ -69,7 +73,7 @@ class FreshmanBooksViewController: UIViewController {
         let islandRef = httpsReference //.child("images/island.jpg")
         
         // Download in memory with a maximum allowed size of 30MB (30 * 1024 * 1024 bytes)
-        islandRef.getData(maxSize: 50 * 1024 * 1024) { data, error in
+        islandRef.getData(maxSize: 30 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
             } else {
@@ -90,7 +94,6 @@ class FreshmanBooksViewController: UIViewController {
         var i = 0
         //bookIDの取得
         ref2.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)").observeSingleEvent(of: .value) { (snap,error) in
-            //print(snap)
             let snapData = snap.value as? [String:AnyObject]
             if snapData == nil {
                 return
@@ -110,38 +113,59 @@ class FreshmanBooksViewController: UIViewController {
                         if(i < 4){
                         self.showValue(i: i, pictureImage: self.imageArray[i])
                         i += 1
+                        } else {
+                            
+                            
                         }
                     }
                 }
             }
-            
-            //self.showValue(i: 0, pictureImage: self.imageArray)
-            //self.showValue(i: 1, pictureImage: self.pictureImage2)
-            //self.showValue(i: 2, pictureImage: self.pictureImage3)
-            //self.showValue(i: 3, pictureImage: self.pictureImage4)
         }
     }
     
     //キーに応じた配列に代入
     func checkKey(k: String, v: AnyObject){
-        //let myAp = UIApplication.shared.delegate as! AppDelegate
         if(k == "画像URL"){
             myAp.imageURL.append(v as! String)
-            //print(myAp.imageURL)
         } else if(k == "学籍番号") {
             myAp.stuNumber.append(v as! String)
-            //print(myAp.stuNumber)
         } else if(k == "出版日") {
             myAp.publishDay.append(v as! String)
-            //print(myAp.publishDay)
         }else if(k == "コメント"){
             myAp.comment.append(v as! String)
-            //print(myAp.comment)
         }else if(k == "deleteID"){
             myAp.deleteID.append(v as! String)
-            //print(myAp.deleteID)
-            
         }
     }
+    
+    //次ボタン押された時に使う　要素がない時のエラー処理なし？
+    func nextValue(){
+        myAp.nextCount += 1
+        var j = 0
+        if((myAp.stuNumber.count - 4*myAp.nextCount) % 4 > 0){
+            while(j < 4){
+                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
+                j += 1
+            }
+        }else{
+            while(j < myAp.stuNumber.count%4){
+                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
+                j += 1
+            }
+        }
+    }
+    
+    //戻るボタン時呼び出し　うまく動いて欲しい
+    func beforeValue() {
+        var j = 0
+        if(myAp.nextCount > 0){
+            myAp.nextCount -= 1
+            while(j < 4){
+                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
+                j += 1
+            }
+        }
+    }
+    
 }
 

@@ -25,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var comment: [String] = []
     var deleteID: [String] = []
     
+    //getValue()、詳細画面で使用
+    var i = 0
+    var rearArray: [String] = []
+    var frontArray: [String] = []
+    //FreshmanViewControllerの「次へ」を押された回数
+    var nextCount = 0
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()

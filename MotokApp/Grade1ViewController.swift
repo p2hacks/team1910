@@ -20,32 +20,27 @@ class Grade1ViewController: UIViewController {
     
     @IBAction func processingButtonAction(_ sender: Any) {
         myAp.selectButton3 = "情報表現入門1"
-        //getValue()
         performSegue(withIdentifier: "goFreshmanBooks", sender: nil)
     }
     
     @IBAction func SenkeidaisuuButtonAction(_ sender: Any) {
         myAp.selectButton3 = "線型代数学"
         print("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)")
-        //getValue()
         performSegue(withIdentifier: "goFreshmanBooks", sender: nil)
     }
     
     @IBAction func KaisekiButtonAction(_ sender: Any) {
         myAp.selectButton3 = "解析学1"
-        //getValue()
         performSegue(withIdentifier: "goFreshmanBooks", sender: nil)
     }
     
     @IBAction func KikigaironButtonAction(_ sender: Any) {
         myAp.selectButton3 = "情報機器概論"
-        //getValue()
         performSegue(withIdentifier: "goFreshmanBooks", sender: nil)
     }
     
     @IBAction func LiteracyButtonAction(_ sender: Any) {
         myAp.selectButton3 = "情報リテラシー"
-        //getValue()
         performSegue(withIdentifier: "goFreshmanBooks", sender: nil)
     }
     
