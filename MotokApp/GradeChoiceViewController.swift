@@ -20,21 +20,19 @@ class GradeChoiceViewController: UIViewController {
     }
     
     @IBAction func garde1ButtonAction(_ sender: Any) {
-        
+        performSegue(withIdentifier: "goGrade1ViewController", sender: nil)
     }
     
     @IBAction func grade2ButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "goGrade2ViewController", sender: nil)
     }
     
     @IBAction func grade3ButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "goGrade3ViewController", sender: nil)
     }
     
     @IBAction func grade4ButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "goGrade4ViewController", sender: nil)
     }
     
-    @IBAction func M1ButtonAction(_ sender: Any) {
-    }
-    
-    @IBAction func M2ButtonAction(_ sender: Any) {
-    }
 }
