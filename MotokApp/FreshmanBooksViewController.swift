@@ -167,5 +167,81 @@ class FreshmanBooksViewController: UIViewController {
         }
     }
     
+    //並列処理が間に合わなかった時
+    func nextValue2(){
+        //データベースの参照URL
+        let ref2 = Database.database().reference()
+        //Firebaseからデータを取り出す
+        let myAp = UIApplication.shared.delegate as! AppDelegate
+        myAp.nextCount += 1
+        var i = 0
+        //bookIDの取得
+        ref2.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)").observeSingleEvent(of: .value) { (snap,error) in
+            let snapData = snap.value as? [String:AnyObject]
+            if snapData == nil {
+                return
+            }
+            for (path, _) in snapData! {
+                if(path != "ダミー"){
+                    //詳細データの取得
+                    ref2.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)/\(path)").observeSingleEvent(of: .value) { (snap,error) in
+                        //print(snap)
+                        let snapData = snap.value as? [String:AnyObject]
+                        if snapData == nil {
+                            return
+                        }
+                        for (k, v) in snapData! {
+                            self.checkKey(k: k, v: v)
+                        }
+                        //~~~~~~~~~~~要素が足りない時のエラー処理~~~~~~~~~
+                        if(i < 4){
+                            self.showValue(i: i + myAp.nextCount*4, pictureImage: self.imageArray[i])
+                            i += 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //エラー処理〜〜〜〜
+    func beforeValue2(){
+        //データベースの参照URL
+        let ref2 = Database.database().reference()
+        //Firebaseからデータを取り出す
+        let myAp = UIApplication.shared.delegate as! AppDelegate
+        if(myAp.nextCount > 0){
+            myAp.nextCount -= 1
+        }
+        var i = 0
+        //bookIDの取得
+        ref2.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)").observeSingleEvent(of: .value) { (snap,error) in
+            let snapData = snap.value as? [String:AnyObject]
+            if snapData == nil {
+                return
+            }
+            for (path, _) in snapData! {
+                if(path != "ダミー"){
+                    //詳細データの取得
+                    ref2.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)/\(path)").observeSingleEvent(of: .value) { (snap,error) in
+                        //print(snap)
+                        let snapData = snap.value as? [String:AnyObject]
+                        if snapData == nil {
+                            return
+                        }
+                        for (k, v) in snapData! {
+                            self.checkKey(k: k, v: v)
+                        }
+                        if(i < 4){
+                            self.showValue(i: i + myAp.nextCount*4, pictureImage: self.imageArray[i])
+                            i += 1
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
 }
 
