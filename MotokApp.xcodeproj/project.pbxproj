@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E5D45621746494DB4D4D3A9 /* Pods_MotokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317A88C43AAF2EB8E23E2FAA /* Pods_MotokApp.framework */; };
+		AD496B81439DB3B35C992BF3 /* Pods_MotokAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAF2D7EAAFC2A67F30DC4DF /* Pods_MotokAppUITests.framework */; };
+		D700925F22145D75009DA511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700925E22145D75009DA511 /* AppDelegate.swift */; };
+		D700926122145D75009DA511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700926022145D75009DA511 /* ViewController.swift */; };
+		D700926422145D75009DA511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D700926222145D75009DA511 /* Main.storyboard */; };
+		D700926722145D75009DA511 /* MotokApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D700926522145D75009DA511 /* MotokApp.xcdatamodeld */; };
+		D700926922145D76009DA511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D700926822145D76009DA511 /* Assets.xcassets */; };
+		D700926C22145D76009DA511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D700926A22145D76009DA511 /* LaunchScreen.storyboard */; };
+		D700927722145D76009DA511 /* MotokAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700927622145D76009DA511 /* MotokAppUITests.swift */; };
+		D700928222145DF8009DA511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D700928122145DF8009DA511 /* GoogleService-Info.plist */; };
+		D700928322145DF8009DA511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D700928122145DF8009DA511 /* GoogleService-Info.plist */; };
+		D76136472215300F00634455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136462215300F00634455 /* RegistrationViewController.swift */; };
+		D76136482215300F00634455 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136462215300F00634455 /* RegistrationViewController.swift */; };
+		D761364A22157C3700634455 /* Grade1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364922157C3700634455 /* Grade1ViewController.swift */; };
+		D761364B22157C3700634455 /* Grade1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364922157C3700634455 /* Grade1ViewController.swift */; };
+		D761364D22157C4B00634455 /* Grade2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364C22157C4B00634455 /* Grade2ViewController.swift */; };
+		D761364E22157C4B00634455 /* Grade2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364C22157C4B00634455 /* Grade2ViewController.swift */; };
+		D761365022157C5B00634455 /* Grade3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364F22157C5B00634455 /* Grade3ViewController.swift */; };
+		D761365122157C5B00634455 /* Grade3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761364F22157C5B00634455 /* Grade3ViewController.swift */; };
+		D761365322157C6C00634455 /* Grade4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761365222157C6C00634455 /* Grade4ViewController.swift */; };
+		D761365422157C6C00634455 /* Grade4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D761365222157C6C00634455 /* Grade4ViewController.swift */; };
+		D76136562215C3F600634455 /* RegistCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136552215C3F600634455 /* RegistCheckViewController.swift */; };
+		D76136572215C3F600634455 /* RegistCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76136552215C3F600634455 /* RegistCheckViewController.swift */; };
+		D78923D62216E90E0066C87A /* SophomoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D52216E90E0066C87A /* SophomoreViewController.swift */; };
+		D78923D82216EA360066C87A /* JuniorBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D72216EA360066C87A /* JuniorBooksViewController.swift */; };
+		D78923DA2216EA760066C87A /* SeniorBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923D92216EA760066C87A /* SeniorBooksViewController.swift */; };
+		D78923DC2216EE7B0066C87A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923DB2216EE7B0066C87A /* BookDetailViewController.swift */; };
+		D78923DE221703E00066C87A /* ApplyFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78923DD221703E00066C87A /* ApplyFinishViewController.swift */; };
+		D7A3970D2214A21400BD2130 /* MCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A3970C2214A21400BD2130 /* MCategoryViewController.swift */; };
+		D7A3970E2214A21400BD2130 /* MCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A3970C2214A21400BD2130 /* MCategoryViewController.swift */; };
+		D7A397102214A5F600BD2130 /* ACategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A3970F2214A5F600BD2130 /* ACategoryViewController.swift */; };
+		D7A397112214A5F600BD2130 /* ACategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A3970F2214A5F600BD2130 /* ACategoryViewController.swift */; };
+		D7A397132214B5D800BD2130 /* GradeChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A397122214B5D800BD2130 /* GradeChoiceViewController.swift */; };
+		D7A397142214B5D800BD2130 /* GradeChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A397122214B5D800BD2130 /* GradeChoiceViewController.swift */; };
+		D7DF37152215E376001A78D9 /* FreshmanBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF37142215E376001A78D9 /* FreshmanBooksViewController.swift */; };
+		D7DF371722168F9F001A78D9 /* FinalScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF371622168F9F001A78D9 /* FinalScreenViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D700927322145D76009DA511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D700925322145D75009DA511 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D700925A22145D75009DA511;
+			remoteInfo = MotokApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06A4A3AD70B7670A126D3C0E /* Pods-MotokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotokApp/Pods-MotokApp.release.xcconfig"; sourceTree = "<group>"; };
+		1E01CF753DC56192F1D79BE9 /* Pods-MotokAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotokAppUITests/Pods-MotokAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		317A88C43AAF2EB8E23E2FAA /* Pods_MotokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E01DD11B4B7EEC4176F966 /* Pods-MotokAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotokAppUITests/Pods-MotokAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E0DCF16CE102882566EEE04 /* Pods-MotokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotokApp/Pods-MotokApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AEAF2D7EAAFC2A67F30DC4DF /* Pods_MotokAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotokAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D700925B22145D75009DA511 /* MotokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D700925E22145D75009DA511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D700926022145D75009DA511 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D700926322145D75009DA511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D700926622145D75009DA511 /* MotokApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MotokApp.xcdatamodel; sourceTree = "<group>"; };
+		D700926822145D76009DA511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D700926B22145D76009DA511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D700926D22145D76009DA511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D700927222145D76009DA511 /* MotokAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotokAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D700927622145D76009DA511 /* MotokAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotokAppUITests.swift; sourceTree = "<group>"; };
+		D700927822145D76009DA511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D700928122145DF8009DA511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D76136462215300F00634455 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D761364922157C3700634455 /* Grade1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade1ViewController.swift; sourceTree = "<group>"; };
+		D761364C22157C4B00634455 /* Grade2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade2ViewController.swift; sourceTree = "<group>"; };
+		D761364F22157C5B00634455 /* Grade3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade3ViewController.swift; sourceTree = "<group>"; };
+		D761365222157C6C00634455 /* Grade4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade4ViewController.swift; sourceTree = "<group>"; };
+		D76136552215C3F600634455 /* RegistCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistCheckViewController.swift; sourceTree = "<group>"; };
+		D78923D52216E90E0066C87A /* SophomoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophomoreViewController.swift; sourceTree = "<group>"; };
+		D78923D72216EA360066C87A /* JuniorBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuniorBooksViewController.swift; sourceTree = "<group>"; };
+		D78923D92216EA760066C87A /* SeniorBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorBooksViewController.swift; sourceTree = "<group>"; };
+		D78923DB2216EE7B0066C87A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		D78923DD221703E00066C87A /* ApplyFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFinishViewController.swift; sourceTree = "<group>"; };
+		D7A3970C2214A21400BD2130 /* MCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCategoryViewController.swift; sourceTree = "<group>"; };
+		D7A3970F2214A5F600BD2130 /* ACategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACategoryViewController.swift; sourceTree = "<group>"; };
+		D7A397122214B5D800BD2130 /* GradeChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeChoiceViewController.swift; sourceTree = "<group>"; };
+		D7DF37142215E376001A78D9 /* FreshmanBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshmanBooksViewController.swift; sourceTree = "<group>"; };
+		D7DF371622168F9F001A78D9 /* FinalScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScreenViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D700925822145D75009DA511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E5D45621746494DB4D4D3A9 /* Pods_MotokApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D700926F22145D76009DA511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD496B81439DB3B35C992BF3 /* Pods_MotokAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00621ED1E78308B70EB47669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				317A88C43AAF2EB8E23E2FAA /* Pods_MotokApp.framework */,
+				AEAF2D7EAAFC2A67F30DC4DF /* Pods_MotokAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36FABC2442A09184256C48BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E0DCF16CE102882566EEE04 /* Pods-MotokApp.debug.xcconfig */,
+				06A4A3AD70B7670A126D3C0E /* Pods-MotokApp.release.xcconfig */,
+				1E01CF753DC56192F1D79BE9 /* Pods-MotokAppUITests.debug.xcconfig */,
+				33E01DD11B4B7EEC4176F966 /* Pods-MotokAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D700925222145D75009DA511 = {
+			isa = PBXGroup;
+			children = (
+				D700925D22145D75009DA511 /* MotokApp */,
+				D700927522145D76009DA511 /* MotokAppUITests */,
+				D700925C22145D75009DA511 /* Products */,
+				36FABC2442A09184256C48BA /* Pods */,
+				00621ED1E78308B70EB47669 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D700925C22145D75009DA511 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D700925B22145D75009DA511 /* MotokApp.app */,
+				D700927222145D76009DA511 /* MotokAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D700925D22145D75009DA511 /* MotokApp */ = {
+			isa = PBXGroup;
+			children = (
+				D700925E22145D75009DA511 /* AppDelegate.swift */,
+				D700926022145D75009DA511 /* ViewController.swift */,
+				D700926222145D75009DA511 /* Main.storyboard */,
+				D78923DD221703E00066C87A /* ApplyFinishViewController.swift */,
+				D78923DB2216EE7B0066C87A /* BookDetailViewController.swift */,
+				D78923D92216EA760066C87A /* SeniorBooksViewController.swift */,
+				D78923D72216EA360066C87A /* JuniorBooksViewController.swift */,
+				D78923D52216E90E0066C87A /* SophomoreViewController.swift */,
+				D7DF371622168F9F001A78D9 /* FinalScreenViewController.swift */,
+				D7DF37142215E376001A78D9 /* FreshmanBooksViewController.swift */,
+				D76136552215C3F600634455 /* RegistCheckViewController.swift */,
+				D761365222157C6C00634455 /* Grade4ViewController.swift */,
+				D761364F22157C5B00634455 /* Grade3ViewController.swift */,
+				D761364C22157C4B00634455 /* Grade2ViewController.swift */,
+				D761364922157C3700634455 /* Grade1ViewController.swift */,
+				D76136462215300F00634455 /* RegistrationViewController.swift */,
+				D7A397122214B5D800BD2130 /* GradeChoiceViewController.swift */,
+				D7A3970F2214A5F600BD2130 /* ACategoryViewController.swift */,
+				D7A3970C2214A21400BD2130 /* MCategoryViewController.swift */,
+				D700926822145D76009DA511 /* Assets.xcassets */,
+				D700926A22145D76009DA511 /* LaunchScreen.storyboard */,
+				D700926D22145D76009DA511 /* Info.plist */,
+				D700926522145D75009DA511 /* MotokApp.xcdatamodeld */,
+				D700928122145DF8009DA511 /* GoogleService-Info.plist */,
+			);
+			path = MotokApp;
+			sourceTree = "<group>";
+		};
+		D700927522145D76009DA511 /* MotokAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D700927622145D76009DA511 /* MotokAppUITests.swift */,
+				D700927822145D76009DA511 /* Info.plist */,
+			);
+			path = MotokAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D700925A22145D75009DA511 /* MotokApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D700927B22145D76009DA511 /* Build configuration list for PBXNativeTarget "MotokApp" */;
+			buildPhases = (
+				330AC7EF8A259E490CC16EF3 /* [CP] Check Pods Manifest.lock */,
+				D700925722145D75009DA511 /* Sources */,
+				D700925822145D75009DA511 /* Frameworks */,
+				D700925922145D75009DA511 /* Resources */,
+				C505F5975ECDC152D7CC8D90 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotokApp;
+			productName = MotokApp;
+			productReference = D700925B22145D75009DA511 /* MotokApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D700927122145D76009DA511 /* MotokAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D700927E22145D76009DA511 /* Build configuration list for PBXNativeTarget "MotokAppUITests" */;
+			buildPhases = (
+				E963F8EDB7ABDAF61F551EDC /* [CP] Check Pods Manifest.lock */,
+				D700926E22145D76009DA511 /* Sources */,
+				D700926F22145D76009DA511 /* Frameworks */,
+				D700927022145D76009DA511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D700927422145D76009DA511 /* PBXTargetDependency */,
+			);
+			name = MotokAppUITests;
+			productName = MotokAppUITests;
+			productReference = D700927222145D76009DA511 /* MotokAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D700925322145D75009DA511 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "西俣雷斗";
+				TargetAttributes = {
+					D700925A22145D75009DA511 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D700927122145D76009DA511 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D700925A22145D75009DA511;
+					};
+				};
+			};
+			buildConfigurationList = D700925622145D75009DA511 /* Build configuration list for PBXProject "MotokApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D700925222145D75009DA511;
+			productRefGroup = D700925C22145D75009DA511 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D700925A22145D75009DA511 /* MotokApp */,
+				D700927122145D76009DA511 /* MotokAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D700925922145D75009DA511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D700926C22145D76009DA511 /* LaunchScreen.storyboard in Resources */,
+				D700928222145DF8009DA511 /* GoogleService-Info.plist in Resources */,
+				D700926922145D76009DA511 /* Assets.xcassets in Resources */,
+				D700926422145D75009DA511 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D700927022145D76009DA511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D700928322145DF8009DA511 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		330AC7EF8A259E490CC16EF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotokApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C505F5975ECDC152D7CC8D90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MotokApp/Pods-MotokApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotokApp/Pods-MotokApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E963F8EDB7ABDAF61F551EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MotokAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D700925722145D75009DA511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D761364A22157C3700634455 /* Grade1ViewController.swift in Sources */,
+				D78923DA2216EA760066C87A /* SeniorBooksViewController.swift in Sources */,
+				D7DF37152215E376001A78D9 /* FreshmanBooksViewController.swift in Sources */,
+				D78923DE221703E00066C87A /* ApplyFinishViewController.swift in Sources */,
+				D700926122145D75009DA511 /* ViewController.swift in Sources */,
+				D761365022157C5B00634455 /* Grade3ViewController.swift in Sources */,
+				D761365322157C6C00634455 /* Grade4ViewController.swift in Sources */,
+				D700925F22145D75009DA511 /* AppDelegate.swift in Sources */,
+				D76136472215300F00634455 /* RegistrationViewController.swift in Sources */,
+				D761364D22157C4B00634455 /* Grade2ViewController.swift in Sources */,
+				D7A397102214A5F600BD2130 /* ACategoryViewController.swift in Sources */,
+				D7A3970D2214A21400BD2130 /* MCategoryViewController.swift in Sources */,
+				D76136562215C3F600634455 /* RegistCheckViewController.swift in Sources */,
+				D700926722145D75009DA511 /* MotokApp.xcdatamodeld in Sources */,
+				D7A397132214B5D800BD2130 /* GradeChoiceViewController.swift in Sources */,
+				D78923DC2216EE7B0066C87A /* BookDetailViewController.swift in Sources */,
+				D78923D62216E90E0066C87A /* SophomoreViewController.swift in Sources */,
+				D78923D82216EA360066C87A /* JuniorBooksViewController.swift in Sources */,
+				D7DF371722168F9F001A78D9 /* FinalScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D700926E22145D76009DA511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D761364E22157C4B00634455 /* Grade2ViewController.swift in Sources */,
+				D76136572215C3F600634455 /* RegistCheckViewController.swift in Sources */,
+				D761364B22157C3700634455 /* Grade1ViewController.swift in Sources */,
+				D761365122157C5B00634455 /* Grade3ViewController.swift in Sources */,
+				D76136482215300F00634455 /* RegistrationViewController.swift in Sources */,
+				D7A397112214A5F600BD2130 /* ACategoryViewController.swift in Sources */,
+				D7A3970E2214A21400BD2130 /* MCategoryViewController.swift in Sources */,
+				D700927722145D76009DA511 /* MotokAppUITests.swift in Sources */,
+				D7A397142214B5D800BD2130 /* GradeChoiceViewController.swift in Sources */,
+				D761365422157C6C00634455 /* Grade4ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D700927422145D76009DA511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D700925A22145D75009DA511 /* MotokApp */;
+			targetProxy = D700927322145D76009DA511 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D700926222145D75009DA511 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D700926322145D75009DA511 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D700926A22145D76009DA511 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D700926B22145D76009DA511 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D700927922145D76009DA511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D700927A22145D76009DA511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D700927C22145D76009DA511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0DCF16CE102882566EEE04 /* Pods-MotokApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MotokApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = b1017013.MotokApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D700927D22145D76009DA511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A4A3AD70B7670A126D3C0E /* Pods-MotokApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MotokApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = b1017013.MotokApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D700927F22145D76009DA511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E01CF753DC56192F1D79BE9 /* Pods-MotokAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MotokAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = b1017013.MotokAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MotokApp;
+			};
+			name = Debug;
+		};
+		D700928022145D76009DA511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E01DD11B4B7EEC4176F966 /* Pods-MotokAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MotokAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = b1017013.MotokAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MotokApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D700925622145D75009DA511 /* Build configuration list for PBXProject "MotokApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D700927922145D76009DA511 /* Debug */,
+				D700927A22145D76009DA511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D700927B22145D76009DA511 /* Build configuration list for PBXNativeTarget "MotokApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D700927C22145D76009DA511 /* Debug */,
+				D700927D22145D76009DA511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D700927E22145D76009DA511 /* Build configuration list for PBXNativeTarget "MotokAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D700927F22145D76009DA511 /* Debug */,
+				D700928022145D76009DA511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D700926522145D75009DA511 /* MotokApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D700926622145D75009DA511 /* MotokApp.xcdatamodel */,
+			);
+			currentVersion = D700926622145D75009DA511 /* MotokApp.xcdatamodel */;
+			path = MotokApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D700925322145D75009DA511 /* Project object */;
+}
