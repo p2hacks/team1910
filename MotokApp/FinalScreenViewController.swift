@@ -18,7 +18,7 @@ class FinalScreenViewController: UIViewController {
     
 
     @IBAction func OkGoHomeButton(_ sender: Any) {
-        performSegue(withIdentifier: "goHomeScreen", sender: nil)
+        performSegue(withIdentifier: "goHomeView", sender: nil)
     }
     /*
     // MARK: - Navigation

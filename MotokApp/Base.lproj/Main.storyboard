@@ -426,7 +426,7 @@
                         <viewLayoutGuide key="safeArea" id="EG6-Dp-WTz"/>
                     </view>
                     <connections>
-                        <segue destination="xIj-8t-tgf" kind="show" identifier="goMorauCategory" id="5Eu-JO-pOl"/>
+                        <segue destination="xIj-8t-tgf" kind="show" identifier="goHomeView" id="5Eu-JO-pOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUn-8c-yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1751,7 +1751,8 @@
         <image name="あげる人もらう人" width="450" height="357"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lFu-gx-jAH"/>
+        <segue reference="GQR-bg-xyv"/>
+        <segue reference="5Eu-JO-pOl"/>
         <segue reference="JfT-Y1-Pmw"/>
         <segue reference="gsQ-0X-MZb"/>
     </inferredMetricsTieBreakers>
