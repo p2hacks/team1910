@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もう使わなくなった教科書やものを他の未来大生からもらう、もしくはあげることができます。もらう人か、あげる人か選択してください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-Uj-tlf">
-                                <rect key="frame" x="10" y="30" width="355" height="131.5"/>
+                                <rect key="frame" x="10" y="74" width="355" height="131.5"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-6A-jq6">
-                                <rect key="frame" x="45" y="261.5" width="91" height="80"/>
+                                <rect key="frame" x="45" y="305.5" width="91" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="frP-a7-cU5"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-wX-T7Q">
-                                <rect key="frame" x="239" y="261.5" width="91" height="80"/>
+                                <rect key="frame" x="239" y="305.5" width="91" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Y8l-XU-61c"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="あげる人もらう人" translatesAutoresizingMaskIntoConstraints="NO" id="xZk-mZ-yp9">
-                                <rect key="frame" x="-37.5" y="393" width="450" height="274"/>
+                                <rect key="frame" x="-37.5" y="437" width="450" height="230"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nza-tx-ywR">
-                                <rect key="frame" x="78" y="70" width="219" height="110"/>
+                                <rect key="frame" x="78" y="114" width="219" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Wh3-9q-KVN"/>
                                 </constraints>
@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVS-kW-M93">
-                                <rect key="frame" x="30" y="220" width="315" height="42"/>
+                                <rect key="frame" x="30" y="264" width="315" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="教科書"/>
                                 <connections>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ0-2G-Wjf">
-                                <rect key="frame" x="30" y="332" width="315" height="42"/>
+                                <rect key="frame" x="30" y="376" width="315" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="その他"/>
                                 <connections>
@@ -426,7 +426,7 @@
                         <viewLayoutGuide key="safeArea" id="EG6-Dp-WTz"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goHomeScreen" id="lra-24-Dfl"/>
+                        <segue destination="xIj-8t-tgf" kind="show" identifier="goMorauCategory" id="5Eu-JO-pOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUn-8c-yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,7 +442,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fii-Np-E4h">
-                                <rect key="frame" x="78" y="70" width="205.5" height="110"/>
+                                <rect key="frame" x="78" y="114" width="205.5" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="XZZ-HM-USg"/>
                                 </constraints>
@@ -451,7 +451,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-Y2-0Vq">
-                                <rect key="frame" x="30" y="220" width="315" height="42"/>
+                                <rect key="frame" x="30" y="264" width="315" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="教科書"/>
                                 <connections>
@@ -459,7 +459,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY0-bk-Sob">
-                                <rect key="frame" x="30" y="332" width="315" height="42"/>
+                                <rect key="frame" x="30" y="376" width="315" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="その他"/>
                                 <connections>
@@ -497,13 +497,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欲しい教科書が講義で使われる学年を選択してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRU-Oe-21T">
-                                <rect key="frame" x="20" y="50" width="335" height="55"/>
+                                <rect key="frame" x="20" y="94" width="335" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzP-qF-f9u">
-                                <rect key="frame" x="212" y="121" width="143" height="36"/>
+                                <rect key="frame" x="212" y="165" width="143" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="学年別講義一覧"/>
                                 <connections>
@@ -511,7 +511,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTv-VR-EkR">
-                                <rect key="frame" x="140" y="202" width="95" height="42"/>
+                                <rect key="frame" x="140" y="246" width="95" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="学部1年"/>
                                 <connections>
@@ -519,7 +519,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSN-qC-0UE">
-                                <rect key="frame" x="140" y="284" width="95" height="42"/>
+                                <rect key="frame" x="140" y="328" width="95" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="学部2年"/>
                                 <connections>
@@ -527,7 +527,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7e-3X-hKi">
-                                <rect key="frame" x="140" y="448" width="95" height="42"/>
+                                <rect key="frame" x="140" y="492" width="95" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="学部4年"/>
                                 <connections>
@@ -535,7 +535,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQJ-fP-b7b">
-                                <rect key="frame" x="140" y="366" width="95" height="42"/>
+                                <rect key="frame" x="140" y="410" width="95" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="学部3年"/>
                                 <connections>
@@ -698,7 +698,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-2G-7ey">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                <rect key="frame" x="309" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HbQ-VS-RWG"/>
                                     <constraint firstAttribute="height" constant="50" id="V9c-cv-xnc"/>
@@ -983,7 +983,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5T-Iw-WOl">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                <rect key="frame" x="309" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="QD3-Wf-5Ky"/>
                                     <constraint firstAttribute="height" constant="50" id="dq8-bY-Lfq"/>
@@ -1147,12 +1147,12 @@
                         <viewLayoutGuide key="safeArea" id="ToF-vd-jVr"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goHomeView" id="Ikk-eK-kwJ"/>
+                        <segue destination="xIj-8t-tgf" kind="show" identifier="goHomeView" id="lFu-gx-jAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AwK-va-5Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9552.7999999999993" y="-1311.0944527736133"/>
+            <point key="canvasLocation" x="10574" y="-1539"/>
         </scene>
         <!--Grade2 View Controller-->
         <scene sceneID="VBE-sm-vkW">
@@ -1163,7 +1163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kF-PA-oJH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="836"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCL-wD-ww6">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="836"/>
@@ -1391,7 +1391,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOi-gk-cFQ">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                <rect key="frame" x="309" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Rxg-qo-5aN"/>
                                     <constraint firstAttribute="height" constant="50" id="aIb-p4-mHX"/>
@@ -1460,7 +1460,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpI-G7-KnR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="836"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diY-2r-fpf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="836"/>
@@ -1628,7 +1628,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-OU-6Sy">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                                <rect key="frame" x="309" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M8U-fM-d1Q"/>
                                     <constraint firstAttribute="width" constant="50" id="O4a-KD-EJO"/>
@@ -1751,9 +1751,8 @@
         <image name="あげる人もらう人" width="450" height="357"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GQR-bg-xyv"/>
+        <segue reference="lFu-gx-jAH"/>
         <segue reference="JfT-Y1-Pmw"/>
         <segue reference="gsQ-0X-MZb"/>
-        <segue reference="Ikk-eK-kwJ"/>
     </inferredMetricsTieBreakers>
 </document>
