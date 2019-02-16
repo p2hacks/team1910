@@ -58,13 +58,23 @@ class FreshmanBooksViewController: UIViewController {
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
     }
     
+    @IBAction func nextPage(_ sender: Any) {
+        //nextValue2()
+        nextValue()
+    }
+    
+    @IBAction func beforetPage(_ sender: Any) {
+        //beforeValue2()
+        beforeValue()
+    }
     
     //学籍番号と画像の表示
     func showValue(i: Int, pictureImage: UIImageView) {
-        labelArray[i].text = myAp.stuNumber[i]
+        labelArray[i%4].text = myAp.stuNumber[i]
         viewImage(url: myAp.imageURL[i], imageView: pictureImage)
     }
     
+    //写真の表示
     func viewImage(url: String, imageView: UIImageView){
         let storage = Storage.storage()
         let httpsReference = storage.reference(forURL: url)
@@ -85,7 +95,7 @@ class FreshmanBooksViewController: UIViewController {
     }
     
 
-    //データの取得
+    //データの取得 データが４つ未満だとエラー
     func getValue() {
         //データベースの参照URL
         let ref2 = Database.database().reference()
@@ -113,10 +123,7 @@ class FreshmanBooksViewController: UIViewController {
                         if(i < 4){
                         self.showValue(i: i, pictureImage: self.imageArray[i])
                         i += 1
-                        } else {
-                            
-                            
-                        }
+                        } 
                     }
                 }
             }
@@ -142,7 +149,7 @@ class FreshmanBooksViewController: UIViewController {
     func nextValue(){
         myAp.nextCount += 1
         var j = 0
-        if((myAp.stuNumber.count - 4*myAp.nextCount) % 4 > 0){
+        if((myAp.stuNumber.count - 4*myAp.nextCount) / 4 > 0){
             while(j < 4){
                 showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
                 j += 1
@@ -151,6 +158,9 @@ class FreshmanBooksViewController: UIViewController {
             while(j < myAp.stuNumber.count%4){
                 showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
                 j += 1
+            }
+            while(j < 4){
+                
             }
         }
     }
@@ -194,8 +204,8 @@ class FreshmanBooksViewController: UIViewController {
                             self.checkKey(k: k, v: v)
                         }
                         //~~~~~~~~~~~要素が足りない時のエラー処理~~~~~~~~~
-                        if(i < 4){
-                            self.showValue(i: i + myAp.nextCount*4, pictureImage: self.imageArray[i])
+                        if(myAp.nextCount*4 - 1 < i){
+                            self.showValue(i: i, pictureImage: self.imageArray[i%4])
                             i += 1
                         }
                     }

@@ -40,5 +40,9 @@ class SophomoreViewController: UIViewController {
     @IBAction func picture4ChoiceButton(_ sender: Any) {
         performSegue(withIdentifier: "goBookDetail2", sender: nil)
     }
+    @IBAction func nextPage(_ sender: Any) {
+    }
     
+    @IBAction func beforePage(_ sender: Any) {
+    }
 }

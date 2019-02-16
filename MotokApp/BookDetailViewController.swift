@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseStorage
 //検索して、見つけた教科書の詳細を示す画面
 class BookDetailViewController: UIViewController {
@@ -29,8 +30,8 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var CommentView: UITextView!
     //完了ボタン
     @IBAction func DecisionButtonAction(_ sender: Any) {
+        deleteData()
         performSegue(withIdentifier: "goApplyFinishView", sender: nil)
-        
     }
     
     func viewImage(url: String, imageView: UIImageView){
@@ -50,5 +51,23 @@ class BookDetailViewController: UIViewController {
                 imageView.image = image
             }
         }
+    }
+    
+    //削除ボタン
+    func deleteData(){
+        let ref = Database.database().reference()
+        ref.child("\(myAp.selectButton1)/\(myAp.selectButton2)/\(myAp.selectButton3)/\(myAp.deleteID[myAp.i + myAp.nextCount*4])").removeValue()
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference(forURL: myAp.deleteID[myAp.i + myAp.nextCount*4])
+        
+        storageRef.delete{error in
+        if let error = error {
+            // Uh-oh, an error occurred!
+        } else {
+            // File deleted successfully
+            }
+        }
+
     }
 }

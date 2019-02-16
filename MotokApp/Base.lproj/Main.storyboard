@@ -982,8 +982,13 @@
                                     <action selector="picture2ChoiceButton:" destination="2G5-GA-6op" eventType="touchUpInside" id="CBR-s2-Np6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5T-Iw-WOl">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMZ-3a-Clo">
+                                <rect key="frame" x="243" y="40" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5T-Iw-WOl">
+                                <rect key="frame" x="309" y="30" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="QD3-Wf-5Ky"/>
                                     <constraint firstAttribute="height" constant="50" id="dq8-bY-Lfq"/>
@@ -1390,15 +1395,26 @@
                                     <action selector="picture2ChoiceButton:" destination="DLa-I9-xeg" eventType="touchUpInside" id="oAp-H2-co0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOi-gk-cFQ">
-                                <rect key="frame" x="309" y="20" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-3c-Akd">
+                                <rect key="frame" x="233" y="40" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="before"/>
+                                <connections>
+                                    <action selector="beforePage:" destination="DLa-I9-xeg" eventType="touchUpInside" id="5kC-iB-H00"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOi-gk-cFQ">
+                                <rect key="frame" x="309" y="30" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Rxg-qo-5aN"/>
                                     <constraint firstAttribute="height" constant="50" id="aIb-p4-mHX"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="jqd-9Y-BND"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="mN7-fr-C5d"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="DLa-I9-xeg" eventType="touchUpInside" id="4HK-rm-cRz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1633,6 +1649,9 @@
                                     <constraint firstAttribute="width" constant="50" id="O4a-KD-EJO"/>
                                 </constraints>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="SWe-Y7-ebj" eventType="touchUpInside" id="54S-Xf-Hwo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rg-5i-Ms5">
                                 <rect key="frame" x="70" y="318" width="62" height="30"/>
@@ -1672,6 +1691,15 @@
                                 </state>
                                 <connections>
                                     <action selector="picture4ChoiceButton:" destination="SWe-Y7-ebj" eventType="touchUpInside" id="gNX-4U-d9J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5M-ra-Lqb">
+                                <rect key="frame" x="16" y="63" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="前へ"/>
+                                <connections>
+                                    <action selector="beforetPage:" destination="SWe-Y7-ebj" eventType="touchUpInside" id="w6w-0e-ibB"/>
+                                    <action selector="nextPage:" destination="SWe-Y7-ebj" eventType="touchUpInside" id="xpz-jV-1Iz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1750,7 +1778,7 @@
         <image name="あげる人もらう人" width="450" height="357"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="18d-kZ-9Ju"/>
+        <segue reference="CQT-2v-SFI"/>
         <segue reference="gsQ-0X-MZb"/>
         <segue reference="Ikk-eK-kwJ"/>
     </inferredMetricsTieBreakers>
