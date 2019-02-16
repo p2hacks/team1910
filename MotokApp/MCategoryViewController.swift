@@ -9,7 +9,9 @@
 import UIKit
 
 class MCategoryViewController: UIViewController {
-
+    //AppDelegateの参照
+    var myAp = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,10 +20,11 @@ class MCategoryViewController: UIViewController {
     
     @IBAction func kyoukashoButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "goGradeChoice", sender: nil)
-        
+        myAp.selectButton1 = "本/教科書"
     }
     
     @IBAction func othersButtonAction(_ sender: Any) {
+        myAp.selectButton1 = "その他"
     }
     
 }

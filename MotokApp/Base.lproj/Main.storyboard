@@ -1569,7 +1569,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-zH-yvw">
                                 <rect key="frame" x="16" y="111" width="170" height="227"/>
-                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="227" id="6iz-vs-aig"/>
                                     <constraint firstAttribute="width" constant="170" id="YtB-M4-Z6u"/>
@@ -1751,8 +1750,8 @@
         <image name="あげる人もらう人" width="450" height="357"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GQR-bg-xyv"/>
-        <segue reference="JfT-Y1-Pmw"/>
+        <segue reference="mFu-Pa-pNX"/>
+        <segue reference="18d-kZ-9Ju"/>
         <segue reference="gsQ-0X-MZb"/>
         <segue reference="Ikk-eK-kwJ"/>
     </inferredMetricsTieBreakers>

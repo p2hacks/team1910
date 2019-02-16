@@ -14,8 +14,17 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var selectButton1: String = "" //text or other
+    var selectButton2: String = "" //grade
+    var selectButton3: String = "" //lecture
+    var sendURL: String! //up load用
+    //ダウンロード用
+    var imageURL: [String] = []
+    var stuNumber: [String] = []
+    var publishDay: [String] = []
+    var comment: [String] = []
+    var deleteID: [String] = []
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
