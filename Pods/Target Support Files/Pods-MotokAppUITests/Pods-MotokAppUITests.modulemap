@@ -1,6 +1,0 @@
-framework module Pods_MotokAppUITests {
-  umbrella header "Pods-MotokAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
