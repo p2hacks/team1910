@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //あげる人の画面選択への遷移
         performSegue(withIdentifier: "goAgeruCategory", sender: nil)
     }
+    
 }
 

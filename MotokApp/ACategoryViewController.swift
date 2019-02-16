@@ -19,6 +19,7 @@ class ACategoryViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func AkyokashoButtonAction(_ sender: Any) {
          performSegue(withIdentifier: "goRegistViewController", sender: nil)
+        
     }
     
     @IBAction func AothersButtonAction(_ sender: Any) {
