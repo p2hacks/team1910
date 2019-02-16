@@ -12,13 +12,11 @@ class Grade3ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func ComingSoonButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "goJuniorBooks", sender: nil)
+        performSegue(withIdentifier: "goGrade3Books", sender: nil)
         
     }
     

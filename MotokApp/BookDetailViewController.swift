@@ -12,7 +12,6 @@ class BookDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     //画面の指示
     @IBOutlet weak var directionLabel: UILabel!
