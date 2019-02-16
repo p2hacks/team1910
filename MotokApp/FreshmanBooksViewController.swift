@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//Freshmanの名前は許してほしい
 class FreshmanBooksViewController: UIViewController {
     
     
@@ -39,5 +39,11 @@ class FreshmanBooksViewController: UIViewController {
     
     @IBAction func picture4ChoiceButton(_ sender: Any) {
         performSegue(withIdentifier: "goBookDetail1", sender: nil)
+    }
+    
+    @IBAction func nextBooksButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func backBooksButtonAction(_ sender: Any) {
     }
 }
