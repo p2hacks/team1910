@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistCheckViewController: UIViewController {
 
+    var ref: DatabaseReference!
+    let myAp = UIApplication.shared.delegate as! AppDelegate
+    var bookid = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +27,17 @@ class RegistCheckViewController: UIViewController {
     
     @IBAction func YesButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "goFinalScreen", sender: nil)
+        let myAp = UIApplication.shared.delegate as! AppDelegate
+        myAp.adddeleteID = ["deleteid": bookid]
+        
+        ref.child("本").child("教科書/1学年/解析学").child(bookid).setValue(myAp.addstuNumber)
+        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.addcomment)
+        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.addpublishday)
+        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.adddeleteID)
     }
+    
+    
+    
     
     @IBAction func NoButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "goBackRegistration", sender: nil)
