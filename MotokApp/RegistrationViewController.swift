@@ -18,7 +18,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         //delegateの伝達先をRegistrationViewControllerに設定
         inputStudentNum.delegate = self
         inputBookName.delegate = self
-        
         inputComment.delegate = self /*<- ここのエラーが解決しないとコメントがかけない！どうしよ！*/
         
         //改行ボタンを完了ボタンに変更
@@ -27,7 +26,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         inputComment.returnKeyType = .done
         //文字が何も入力されていない時に表示される文字(薄っすら見える文字)
         inputStudentNum.placeholder = "学籍番号"
-        inputStudentNum.placeholder = "本のタイトル"
+        
     }
     
     @IBOutlet weak var inputStudentNum: UITextField!
@@ -77,10 +76,11 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
     @IBOutlet weak var inputComment: UITextView!
     
     //入力後キーボードを閉じる。
-    func textFieldShouldReturn(_ textField: UITextField, _ textView: UITextView) -> Bool{
-        //
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        
         textField.resignFirstResponder()
-        textView.resignFirstResponder()
+        
         //入力されたテキストをinputKeyに保存し、その値をコンソールに表示する
         if let inputKey = textField.text {
             print(inputKey)
@@ -100,4 +100,13 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
     @IBAction func doneButton(_ sender: Any) {
         performSegue(withIdentifier: "checkScreenViewController", sender: nil)
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            inputComment.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+   
 }
