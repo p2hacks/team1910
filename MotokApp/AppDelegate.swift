@@ -15,7 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    //アップロード用
+    var selectButton1: String = "" //text or other
+    var selectButton2: String = "" //grade
+    var selectButton3: String = "" //lecture
+    var sendURL: String! //up load用
+    //ダウンロード用
+    var imageURL: [String] = []
+    var stuNumber: [String] = []
+    var publishDay: [String] = []
+    var comment: [String] = []
+    var deleteID: [String] = []
+    
+    //getValue()、詳細画面で使用
+    var i = 0
+    var rearArray: [String] = []
+    var frontArray: [String] = []
+    //FreshmanViewControllerの「次へ」を押された回数
+    var nextCount = 0
+
  
     var addstuNumber = ["":""]
     var addpublishday = ["":""]

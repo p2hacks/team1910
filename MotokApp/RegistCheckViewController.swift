@@ -38,10 +38,10 @@ class RegistCheckViewController: UIViewController {
         myAp.adddeleteID = ["deleteid": bookid]
         print(myAp.addstuNumber)
         
-        ref.child("本").child("教科書/1学年/解析学").child(bookid).setValue(myAp.addstuNumber)
-        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.addcomment)
-        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.addpublishday)
-        ref.child("本").child("教科書/1学年/解析学").child(bookid).updateChildValues(myAp.adddeleteID)
+        ref.child(myAp.selectButton1).child(bookid).setValue(myAp.addstuNumber)
+        ref.child(myAp.selectButton1).child(bookid).updateChildValues(myAp.addcomment)
+        ref.child(myAp.selectButton1).child(bookid).updateChildValues(myAp.addpublishday)
+        ref.child(myAp.selectButton1).child(bookid).updateChildValues(myAp.adddeleteID)
         //let image:UIImage! = myAp.toaddpicture.image
         self.fileupload(deta: myAp.toaddpicture)
         print("aaaaaaaaa")
@@ -52,6 +52,7 @@ class RegistCheckViewController: UIViewController {
     
     //UIImageViewの画像をでStorageにアップロードかつURLの取得
     func fileupload(deta: UIImage) {
+        let myAp = UIApplication.shared.delegate as! AppDelegate
         //保存するURLを指定
         let storage = Storage.storage()
         let storageRef = storage.reference()
@@ -76,7 +77,7 @@ class RegistCheckViewController: UIViewController {
                     print(1)
                     print(self.addimageURL!)
                     let data  = ["画像URL": self.addimageURL!]
-                    self.ref.child("本").child("教科書/1学年/解析学").child(self.bookid).updateChildValues(data)
+                    self.ref.child(myAp.selectButton1).child(self.bookid).updateChildValues(data)
                 }
             }
         }

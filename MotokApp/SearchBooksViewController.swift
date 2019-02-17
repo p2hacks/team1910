@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchBooksViewController: UIViewController {
-
+var myAp = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +30,18 @@ class SearchBooksViewController: UIViewController {
     @IBAction func searchButton(_ sender: Any) {
     }
     
+    @IBAction func bibunn(_ sender: Any) {
+        myAp.selectButton1 = "本/教科書/1学年/解析学1"
+    }
+    @IBAction func sekibunn(_ sender: Any) {
+        myAp.selectButton1 = "本/教科書/1学年/解析学2"
+    }
+    @IBAction func sennkei1(_ sender: Any) {
+         myAp.selectButton1 = "本/教科書/2学年/線形代数学"
+    }
+    @IBAction func sennk(_ sender: Any) {
+        myAp.selectButton1 = "本/教科書/1学年/線形代数学"
+    }
     /*
     // MARK: - Navigation
 
