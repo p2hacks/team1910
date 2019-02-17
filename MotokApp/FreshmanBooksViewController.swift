@@ -13,6 +13,10 @@ import FirebaseStorage
 
 class FreshmanBooksViewController: UIViewController {
     let myAp = UIApplication.shared.delegate as! AppDelegate
+    
+     var startIndex = 0
+     var endIndex = 0
+    
     override func viewDidLoad() {
         imageArray.append(pictureImage1)
         imageArray.append(pictureImage2)
@@ -24,6 +28,7 @@ class FreshmanBooksViewController: UIViewController {
         labelArray.append(label4)
         super.viewDidLoad()
         getValue()
+        myAp.nextCount = 0
     }
     //let myAp = UIApplication.shared.delegate as! AppDelegate
     
@@ -59,18 +64,34 @@ class FreshmanBooksViewController: UIViewController {
     }
     
     @IBAction func nextPage(_ sender: Any) {
-        //nextValue2()
         nextValue()
     }
     
     @IBAction func beforetPage(_ sender: Any) {
-        //beforeValue2()
         beforeValue()
     }
     
+    
+    
     //学籍番号と画像の表示
-    func showValue(i: Int, pictureImage: UIImageView) {
+    func showValue(i: Int, pictureImage: UIImageView, startIndex: Int, endIndex: Int) {
+        //TODO: 呼び出されるときには、start,endが調整済み
+        let nextValueArray = myAp.stuNumber[startIndex...endIndex-1]
+        
+        for label in labelArray {
+            label.text = ""
+        }
+        
+        for (index,nextValue) in nextValueArray.enumerated() {
+            guard index < 4 else {return}
+            labelArray[index].text = nextValue
+        }
+        
+        //TODO: imageViewのarrayも同じように
+        
+        print(myAp.stuNumber[i])
         labelArray[i%4].text = myAp.stuNumber[i]
+        print("labelArray[i%4].text ",labelArray[i%4].text )
         viewImage(url: myAp.imageURL[i], imageView: pictureImage)
     }
     
@@ -93,8 +114,6 @@ class FreshmanBooksViewController: UIViewController {
             }
         }
     }
-    
-
     //データの取得 データが４つ未満だとエラー
     func getValue() {
         //データベースの参照URL
@@ -121,7 +140,7 @@ class FreshmanBooksViewController: UIViewController {
                             self.checkKey(k: k, v: v)
                         }
                         if(i < 4){
-                        self.showValue(i: i, pictureImage: self.imageArray[i])
+                            self.showValue(i: i, pictureImage: self.imageArray[i], startIndex: self.startIndex, endIndex: myAp.stuNumber.count)
                         i += 1
                         } 
                     }
@@ -145,35 +164,54 @@ class FreshmanBooksViewController: UIViewController {
         }
     }
     
-    //次ボタン押された時に使う　要素がない時のエラー処理なし？
+    //MARK:グローバル変数。スライスする際の開始・終了位置
+    var start = 0
+    var end = 3
+    
+    //次ボタン押された時に使う
     func nextValue(){
-        myAp.nextCount += 1
+        //TODO:start, endの操作
+        
+        
         var j = 0
-        if((myAp.stuNumber.count - 4*myAp.nextCount) / 4 > 0){
+        myAp.nextCount += 1
+        if(myAp.stuNumber.count-4 >= (myAp.nextCount)*4){
             while(j < 4){
-                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
+                startIndex += 4
+                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j], startIndex: startIndex, endIndex: myAp.stuNumber.count)
                 j += 1
             }
         }else{
             while(j < myAp.stuNumber.count%4){
-                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
+                startIndex += 4
+                showValue(i: j + (myAp.stuNumber.count/4)*4, pictureImage: imageArray[j], startIndex: startIndex, endIndex: myAp.stuNumber.count)
                 j += 1
             }
             while(j < 4){
-                
+                //空白にするためにUIImageの削除 新たに値を代入できない？
+                //imageArray[j].removeFromSuperview()
+                //白い画像を用いてそれっぽく
+                viewImage(url: "https://firebasestorage.googleapis.com/v0/b/motokapp-b8915.appspot.com/o/images%2Fwhite.jpeg?alt=media&token=7a62b226-bde9-4355-ab24-1434d68566f5", imageView: imageArray[j])
+                labelArray[j].text = ""
+                j += 1
             }
+            myAp.nextCount = myAp.stuNumber.count/4
         }
     }
     
     //戻るボタン時呼び出し　うまく動いて欲しい
     func beforeValue() {
+        //TODO: start, endの調整
         var j = 0
-        if(myAp.nextCount > 0){
-            myAp.nextCount -= 1
-            while(j < 4){
-                showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j])
-                j += 1
-            }
+        myAp.nextCount -= 1
+        if(myAp.nextCount < 0){
+            myAp.nextCount = 0
+        }
+        startIndex -= 4
+        print("fbfgsufhs",j + myAp.nextCount*4)
+        while(j < 4){
+            showValue(i: j + myAp.nextCount*4, pictureImage: imageArray[j], startIndex: startIndex, endIndex: myAp.stuNumber.count)
+            j += 1
         }
     }
     
@@ -205,7 +243,7 @@ class FreshmanBooksViewController: UIViewController {
                         }
                         //~~~~~~~~~~~要素が足りない時のエラー処理~~~~~~~~~
                         if(myAp.nextCount*4 - 1 < i){
-                            self.showValue(i: i, pictureImage: self.imageArray[i%4])
+//                            self.showValue(i: i, pictureImage: self.imageArray[i%4], startIndex: <#Int#>, endIndex: <#Int#>)
                             i += 1
                         }
                     }
@@ -243,7 +281,7 @@ class FreshmanBooksViewController: UIViewController {
                             self.checkKey(k: k, v: v)
                         }
                         if(i < 4){
-                            self.showValue(i: i + myAp.nextCount*4, pictureImage: self.imageArray[i])
+//                            self.showValue(i: i + myAp.nextCount*4, pictureImage: self.imageArray[i], startIndex: <#Int#>, endIndex: <#Int#>)
                             i += 1
                         }
                     }
