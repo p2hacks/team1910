@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
@@ -26,6 +27,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         inputComment.returnKeyType = .done
         //文字が何も入力されていない時に表示される文字(薄っすら見える文字)
         inputStudentNum.placeholder = "学籍番号"
+        
     }
     
     @IBOutlet weak var inputStudentNum: UITextField!
@@ -57,7 +59,32 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
                 self.present(imagePickerController, animated: true, completion: nil)
             })
             alertController.addAction(photoLibraryAction)
+            
         }
+        
+                /*let sourceType:UIImagePickerController.SourceType =
+                    UIImagePickerController.SourceType.photoLibrary
+                
+                if UIImagePickerController.isSourceTypeAvailable(
+                    UIImagePickerController.SourceType.photoLibrary){
+                    // インスタンスの作成
+                    let cameraPicker = UIImagePickerController()
+                    cameraPicker.sourceType = sourceType
+                    cameraPicker.delegate = self
+                    self.present(cameraPicker, animated: true, completion: nil)
+                    print("a")
+                }
+                else{
+                    print("b")
+                }*/
+        /*
+        //選択
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                setImageToScene(image: image)
+            }
+        }
+        */
         //キャンセルの選択肢を定義
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
@@ -67,6 +94,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         //選択肢を画面に表示
         present(alertController, animated: true, completion: nil)
     }
+    
+    
+    
     
     
     //コメント欄
@@ -84,10 +114,16 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
     
     //撮影が終わった際に呼ばれるdelegateメソッド
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        //imageViewにカメラで撮った写真を保存する
+        /*//imageViewにカメラで撮った写真を保存する
         cameraImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImageView
+        //cameraImage = info[UIImagePickerController.]*/
         //カメラを閉じる
         dismiss(animated: true, completion: nil)
+        if let pickedImage = info[.originalImage]
+            as? UIImage {
+            cameraImage.contentMode = .scaleAspectFit
+            cameraImage.image = pickedImage
+        }
     }
     //教科書のタイトル
     @IBOutlet weak var inputBookName: UITextField!
@@ -96,12 +132,19 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         performSegue(withIdentifier: "checkScreenViewController", sender: nil)
         
         let myAp = UIApplication.shared.delegate as! AppDelegate
-        
         myAp.addstuNumber = ["学籍番号": inputStudentNum.text!]
         myAp.addpublishday = ["出版日": inputBookName.text!]
         myAp.addcomment = ["コメント": inputComment.text!]
+        let image:UIImage! = cameraImage.image
+        myAp.toaddpicture = image
+        print(myAp.addstuNumber)
+        print(myAp.addpublishday)
+        print(myAp.addcomment)
+    
     }
     
+   
+        
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n"){
             inputComment.resignFirstResponder()
@@ -110,3 +153,4 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate, UITextV
         return true
     }
 }
+

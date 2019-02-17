@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E5D45621746494DB4D4D3A9 /* Pods_MotokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317A88C43AAF2EB8E23E2FAA /* Pods_MotokApp.framework */; };
+		5E47D8032218A9D1006B695F /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E47D8022218A9D1006B695F /* SearchBooksViewController.swift */; };
 		AD496B81439DB3B35C992BF3 /* Pods_MotokAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAF2D7EAAFC2A67F30DC4DF /* Pods_MotokAppUITests.framework */; };
 		D700925F22145D75009DA511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700925E22145D75009DA511 /* AppDelegate.swift */; };
 		D700926122145D75009DA511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700926022145D75009DA511 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		317A88C43AAF2EB8E23E2FAA /* Pods_MotokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E01DD11B4B7EEC4176F966 /* Pods-MotokAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotokAppUITests/Pods-MotokAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E0DCF16CE102882566EEE04 /* Pods-MotokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotokApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotokApp/Pods-MotokApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5E47D8022218A9D1006B695F /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
 		AEAF2D7EAAFC2A67F30DC4DF /* Pods_MotokAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotokAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D700925B22145D75009DA511 /* MotokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D700925E22145D75009DA511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				D700925E22145D75009DA511 /* AppDelegate.swift */,
 				D700926022145D75009DA511 /* ViewController.swift */,
 				D700926222145D75009DA511 /* Main.storyboard */,
+				5E47D8022218A9D1006B695F /* SearchBooksViewController.swift */,
 				D78923DD221703E00066C87A /* ApplyFinishViewController.swift */,
 				D78923DB2216EE7B0066C87A /* BookDetailViewController.swift */,
 				D78923D92216EA760066C87A /* SeniorBooksViewController.swift */,
@@ -375,6 +378,7 @@
 				D7DF37152215E376001A78D9 /* FreshmanBooksViewController.swift in Sources */,
 				D78923DE221703E00066C87A /* ApplyFinishViewController.swift in Sources */,
 				D700926122145D75009DA511 /* ViewController.swift in Sources */,
+				5E47D8032218A9D1006B695F /* SearchBooksViewController.swift in Sources */,
 				D761365022157C5B00634455 /* Grade3ViewController.swift in Sources */,
 				D761365322157C6C00634455 /* Grade4ViewController.swift in Sources */,
 				D700925F22145D75009DA511 /* AppDelegate.swift in Sources */,
@@ -558,7 +562,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8BM9F2RG5;
 				INFOPLIST_FILE = MotokApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +582,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8BM9F2RG5;
 				INFOPLIST_FILE = MotokApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
